@@ -1,0 +1,36 @@
+/*
+Escribe una función que genere una contraseña aleatoria que cumpla con ciertos criterios, como tener una longitud mínima,
+ incluir letras mayúsculas y minúsculas, números y caracteres especiales.
+*/
+function generarContraseña(longitud) {
+    const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+    let contraseña = '';
+
+    for (let i = 0; i < longitud; i++) {
+        const caracterAleatorio = caracteres.charAt(Math.floor(Math.random()*caracteres.length));
+        contraseña += caracterAleatorio;
+    }
+
+    return contraseña;
+}
+
+// Ejemplo de uso para generar una contraseña de 12 caracteres
+const longitud = 12;
+const contraseñaGenerada = generarContraseña(longitud);
+console.log(contraseñaGenerada);
+
+/*
+Invertir una cadena de texto (por ejemplo, "hola" se convierte en "aloh").
+*/
+function invertirCadena(cadena) {
+    let cadenaInvertida = '';
+    for (let i = cadena.length - 1; i >= 0; i--) {
+      cadenaInvertida += cadena[i];
+    }
+    return cadenaInvertida;
+  }
+  
+  // Ejemplo de uso
+  const texto = "hola";
+  const textoInvertido = invertirCadena(texto);
+  console.log(textoInvertido);  // Esto imprimirá "aloh"
