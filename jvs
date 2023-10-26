@@ -34,3 +34,21 @@ function invertirCadena(cadena) {
   const texto = "hola";
   const textoInvertido = invertirCadena(texto);
   console.log(textoInvertido);  // Esto imprimirá "aloh"
+
+
+/*
+
+Crear una función que elimine todos los caracteres especiales y espacios en blanco de una cadena de texto.
+
+*/ 
+
+  function eliminarCaracteresEspecialesYEspacios(cadena) {
+    // Utiliza una expresión regular para eliminar caracteres especiales y espacios en blanco
+    return cadena.replace(/[^\w\s]/g, '');
+  }
+  
+  // Ejemplo de uso:
+  var textoOriginal = "¡Hola, esto es un ejemplo de texto con caracteres especiales!";
+  var textoLimpio = eliminarCaracteresEspecialesYEspacios(textoOriginal);
+  console.log(textoLimpio); // Esto imprimirá: "Hola esto es un ejemplo de texto con caracteres especiales"
+  
